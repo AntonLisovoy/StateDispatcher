@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="StateDispatcherDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="afterLoadingSegmentedControl" destination="Od4-Nr-Ikz" id="npr-EC-dTN"/>
+                <outlet property="afterRetrySegmentedControl" destination="leU-rp-NNY" id="ESE-Vm-D1n"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-iJ-0ee">
+                    <rect key="frame" x="15" y="69" width="384" height="61.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose state after loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLe-w0-MQS">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Od4-Nr-Ikz">
+                            <rect key="frame" x="0.0" y="30.5" width="384" height="32"/>
+                            <segments>
+                                <segment title="Content"/>
+                                <segment title="Error"/>
+                                <segment title="Empty"/>
+                            </segments>
+                            <connections>
+                                <action selector="afterLoadingSegmentDidChanged:" destination="-1" eventType="valueChanged" id="idK-Eu-zgu"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sXg-O7-tAl">
+                    <rect key="frame" x="15" y="155.5" width="384" height="61.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose state after retry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3b-Yv-eO2">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="leU-rp-NNY">
+                            <rect key="frame" x="0.0" y="30.5" width="384" height="32"/>
+                            <segments>
+                                <segment title="Content"/>
+                                <segment title="Error"/>
+                                <segment title="Empty"/>
+                            </segments>
+                            <connections>
+                                <action selector="afterRetrySegmentDidChanged:" destination="-1" eventType="valueChanged" id="4pk-Kj-pfG"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lex-yB-fIE">
+                    <rect key="frame" x="187" y="433" width="40" height="30"/>
+                    <state key="normal" title="Apply"/>
+                    <connections>
+                        <action selector="applyDidTapped:" destination="-1" eventType="touchUpInside" id="fPL-mp-8M0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="sXg-O7-tAl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="4OM-BH-NUH"/>
+                <constraint firstItem="sXg-O7-tAl" firstAttribute="top" secondItem="dEe-iJ-0ee" secondAttribute="bottom" constant="25" id="6ZL-w1-u49"/>
+                <constraint firstItem="dEe-iJ-0ee" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="Iea-g0-kl8"/>
+                <constraint firstItem="lex-yB-fIE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="KcI-KT-aNo"/>
+                <constraint firstItem="lex-yB-fIE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S5c-8R-fNG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sXg-O7-tAl" secondAttribute="trailing" constant="15" id="ew7-kC-D6p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dEe-iJ-0ee" secondAttribute="trailing" constant="15" id="upc-Pk-exu"/>
+                <constraint firstItem="dEe-iJ-0ee" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="xoR-j0-Z1a"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-35" y="11"/>
+        </view>
+    </objects>
+</document>
