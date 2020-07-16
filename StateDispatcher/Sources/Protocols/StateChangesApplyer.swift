@@ -6,8 +6,15 @@
 //  Copyright © 2020 Anton Lisovoy. All rights reserved.
 //
 
-import UIKit
+/// The protocol that changes controllers based on state changes
+public protocol StateChangesApplyer {
+  associatedtype ControllersProvider: StateControllersProvider
+  associatedtype StateMachine
 
-public protocol StateChangesApplyer: class {
+  /// The object that provides controllers for state of a state machine
+  var stateControllersProvider: ControllersProvider? { get set }
+  
+  /// Change the current controller to controller based on the provided state
+  /// - Parameter state: The state of a state machine
   func changeTo(state: StateMachine)
 }

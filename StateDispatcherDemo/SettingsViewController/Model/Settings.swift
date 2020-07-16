@@ -9,6 +9,6 @@
 import Foundation
 
 struct Settings {
-  var afterLoadingState: StateMachine = .content
-  var afterRetryState: StateMachine = .content
+  var afterLoadingState: ContentStateMachine = .content
+  var afterRetryState: ContentStateMachine = .content
 }

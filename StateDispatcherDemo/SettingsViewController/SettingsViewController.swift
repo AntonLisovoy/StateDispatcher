@@ -21,19 +21,20 @@ final class SettingsViewController: UIViewController {
   }
 
   @IBAction private func afterLoadingSegmentDidChanged(_ sender: UISegmentedControl) {
-    guard let state = StateMachine(rawValue: UInt(sender.selectedSegmentIndex)) else { return }
+    guard let state = ContentStateMachine(rawValue: UInt(sender.selectedSegmentIndex)) else { return }
     afterRetrySegmentedControl.isEnabled = state == .error
     settings.afterLoadingState = state
   }
 
   @IBAction private func afterRetrySegmentDidChanged(_ sender: UISegmentedControl) {
-    guard let state = StateMachine(rawValue: UInt(sender.selectedSegmentIndex)) else { return }
+    guard let state = ContentStateMachine(rawValue: UInt(sender.selectedSegmentIndex)) else { return }
     settings.afterRetryState = state
   }
 
   @IBAction func applyDidTapped(_ sender: Any) {
-    let contentController = ContentStateMachineViewController(settings: settings,
-                                                  controllersProvider: ContentStateControllersProvider())
+    let contentController = ContentStateMachineViewController()
+    contentController.stateProvider = ContentStateProvider(settings: settings)
+    contentController.stateControllersProvider = ContentStateControllersProvider()
     navigationController?.pushViewController(contentController, animated: true)
   }
 }

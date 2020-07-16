@@ -9,36 +9,21 @@
 import UIKit
 
 final class ContentStateControllersProvider: StateControllersProvider {
-  private(set) var loadingController: LoadingViewController?
-  private(set) var contentController: ContentViewController!
   private(set) var errorController: ErrorViewController?
-  private(set) var emptyController: EmptyViewController?
 
-  func loadingViewController() -> UIViewController? {
-    if loadingController == nil {
-      loadingController = .init()
+  func controller(forState state: ContentStateMachine) -> UIViewController? {
+    switch state {
+    case .loading:
+      return LoadingViewController()
+    case .content:
+      return ContentViewController()
+    case .empty:
+      return EmptyViewController()
+    case .error:
+      if errorController == nil {
+        errorController = .init()
+      }
+      return errorController
     }
-    return loadingController
-  }
-
-  func contentViewController() -> UIViewController {
-    if contentController == nil {
-      contentController = .init()
-    }
-    return contentController
-  }
-
-  func errorViewController() -> UIViewController? {
-    if errorController == nil {
-      errorController = .init()
-    }
-    return errorController
-  }
-
-  func emptyViewController() -> UIViewController? {
-    if emptyController == nil {
-      emptyController = .init()
-    }
-    return emptyController
   }
 }

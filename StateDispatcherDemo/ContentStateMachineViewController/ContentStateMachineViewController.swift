@@ -8,41 +8,31 @@
 
 import UIKit
 
-final class ContentStateMachineViewController: StateMachineViewController {
-
-  private let settings: Settings
-
-  init(settings: Settings, controllersProvider: StateControllersProvider) {
-    self.settings = settings
-    super.init(controllersProvider: controllersProvider)
-  }
-
-  required public init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
+final class ContentStateMachineViewController: UIViewController, StateMachinable {
+  var stateProvider: ContentStateProvider?
+  var stateControllersProvider: ContentStateControllersProvider?
 
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Content"
-    applyInitialState(settings.afterLoadingState)
-
+    if let stateProvider = stateProvider {
+      changeTo(state: stateProvider.initialState)
+      stateProvider.onStateDidChange = { [weak self] currentState in
+        self?.changeTo(state: currentState)
+      }
+    }
     handleRetryAction()
   }
 
-  private func applyInitialState(_ state: StateMachine) {
-    changeTo(state: .loading)
-
-    // Delay to simulate some network call
-    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-      self.changeTo(state: state)
-    }
+  func changeTo(state: ContentStateMachine) {
+    removePreviousChildAndAdd(viewController: stateControllersProvider?.controller(forState: state))
   }
 
   private func handleRetryAction() {
-    guard let errorController = controllersProvider.errorViewController() as? ErrorViewController else { return }
-    errorController.onRetry = { [weak self] in
+    let errorController = stateControllersProvider?.controller(forState: .error) as? ErrorViewController
+    errorController?.onRetry = { [weak self] in
       guard let self = self else { return }
-      self.applyInitialState(self.settings.afterRetryState)
+      self.stateProvider?.handleRetryAction()
     }
   }
 }

@@ -6,11 +6,14 @@
 //  Copyright © 2020 Anton Lisovoy. All rights reserved.
 //
 
-import UIKit
+import UIKit.UIViewController
 
+/// The protocol that provides controllers for each state of a state machine
 public protocol StateControllersProvider: class {
-  func loadingViewController() -> UIViewController?
-  func contentViewController() -> UIViewController
-  func errorViewController() -> UIViewController?
-  func emptyViewController() -> UIViewController?
+  associatedtype StateMachine
+
+  /// Provides controllers for the state of a state machine
+  /// - Parameter state: The state of a state machine
+  /// - Returns: The view controller for the provided state of a state machine
+  func controller(forState state: StateMachine) -> UIViewController?
 }

@@ -10,21 +10,19 @@
 		26451AD624B09B9100EECA82 /* StateDispatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26451ACC24B09B9100EECA82 /* StateDispatcher.framework */; };
 		26451ADB24B09B9100EECA82 /* StateDispatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451ADA24B09B9100EECA82 /* StateDispatcherTests.swift */; };
 		26451ADD24B09B9100EECA82 /* StateDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 26451ACF24B09B9100EECA82 /* StateDispatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26451AE824B09BD100EECA82 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AE724B09BD100EECA82 /* StateMachine.swift */; };
 		26451AEB24B09C5300EECA82 /* StateChangesApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEA24B09C5300EECA82 /* StateChangesApplyer.swift */; };
 		26451AED24B09E4A00EECA82 /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEC24B09E4A00EECA82 /* StateProvider.swift */; };
 		26451AEF24B09F4400EECA82 /* StateControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEE24B09F4400EECA82 /* StateControllersProvider.swift */; };
-		26451AF224B0A02300EECA82 /* StateMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF124B0A02300EECA82 /* StateMachineViewController.swift */; };
+		26451AF224B0A02300EECA82 /* StateMachinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF124B0A02300EECA82 /* StateMachinable.swift */; };
 		26451AF724B0A45C00EECA82 /* UIViewController+child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF624B0A45C00EECA82 /* UIViewController+child.swift */; };
 		26451AFF24B1201A00EECA82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AFE24B1201A00EECA82 /* AppDelegate.swift */; };
 		26451B0824B1201E00EECA82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26451B0724B1201E00EECA82 /* Assets.xcassets */; };
 		26451B0B24B1201E00EECA82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26451B0924B1201E00EECA82 /* LaunchScreen.storyboard */; };
 		26EC6FE824B5FF45009F8BF5 /* ContentStateControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC6FE724B5FF45009F8BF5 /* ContentStateControllersProvider.swift */; };
 		26EC6FE924B5FF4D009F8BF5 /* StateControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEE24B09F4400EECA82 /* StateControllersProvider.swift */; };
-		26EC6FEA24B6005F009F8BF5 /* StateMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF124B0A02300EECA82 /* StateMachineViewController.swift */; };
+		26EC6FEA24B6005F009F8BF5 /* StateMachinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF124B0A02300EECA82 /* StateMachinable.swift */; };
 		26EC6FEB24B6008C009F8BF5 /* StateChangesApplyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEA24B09C5300EECA82 /* StateChangesApplyer.swift */; };
 		26EC6FEC24B6008F009F8BF5 /* StateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AEC24B09E4A00EECA82 /* StateProvider.swift */; };
-		26EC6FED24B60098009F8BF5 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AE724B09BD100EECA82 /* StateMachine.swift */; };
 		26EC6FEE24B600A3009F8BF5 /* UIViewController+child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26451AF624B0A45C00EECA82 /* UIViewController+child.swift */; };
 		26EC6FF124B607B8009F8BF5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC6FEF24B607B8009F8BF5 /* SettingsViewController.swift */; };
 		26EC6FF224B607B8009F8BF5 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EC6FF024B607B8009F8BF5 /* SettingsViewController.xib */; };
@@ -38,6 +36,10 @@
 		26EC700424B618E8009F8BF5 /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EC700224B618E8009F8BF5 /* EmptyViewController.xib */; };
 		26EC700724B61A8A009F8BF5 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC700524B61A8A009F8BF5 /* ContentViewController.swift */; };
 		26EC700824B61A8A009F8BF5 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26EC700624B61A8A009F8BF5 /* ContentViewController.xib */; };
+		26EC701224BF30CD009F8BF5 /* ContentStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC701124BF30CD009F8BF5 /* ContentStateProvider.swift */; };
+		26EC701424C06BCC009F8BF5 /* ContentSateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC701324C06BCC009F8BF5 /* ContentSateMachine.swift */; };
+		26EC701724C084EE009F8BF5 /* StateMachineManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC701624C084EE009F8BF5 /* StateMachineManageable.swift */; };
+		26EC701824C08585009F8BF5 /* StateMachineManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EC701624C084EE009F8BF5 /* StateMachineManageable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +59,10 @@
 		26451AD524B09B9100EECA82 /* StateDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26451ADA24B09B9100EECA82 /* StateDispatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDispatcherTests.swift; sourceTree = "<group>"; };
 		26451ADC24B09B9100EECA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26451AE724B09BD100EECA82 /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
 		26451AEA24B09C5300EECA82 /* StateChangesApplyer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateChangesApplyer.swift; sourceTree = "<group>"; };
 		26451AEC24B09E4A00EECA82 /* StateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateProvider.swift; sourceTree = "<group>"; };
 		26451AEE24B09F4400EECA82 /* StateControllersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateControllersProvider.swift; sourceTree = "<group>"; };
-		26451AF124B0A02300EECA82 /* StateMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineViewController.swift; sourceTree = "<group>"; };
+		26451AF124B0A02300EECA82 /* StateMachinable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachinable.swift; sourceTree = "<group>"; };
 		26451AF624B0A45C00EECA82 /* UIViewController+child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+child.swift"; sourceTree = "<group>"; };
 		26451AFC24B1201A00EECA82 /* StateDispatcherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateDispatcherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26451AFE24B1201A00EECA82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +82,9 @@
 		26EC700224B618E8009F8BF5 /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		26EC700524B61A8A009F8BF5 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		26EC700624B61A8A009F8BF5 /* ContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
+		26EC701124BF30CD009F8BF5 /* ContentStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentStateProvider.swift; sourceTree = "<group>"; };
+		26EC701324C06BCC009F8BF5 /* ContentSateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSateMachine.swift; sourceTree = "<group>"; };
+		26EC701624C084EE009F8BF5 /* StateMachineManageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineManageable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,17 +151,11 @@
 			path = StateDispatcherTests;
 			sourceTree = "<group>";
 		};
-		26451AE624B09BBD00EECA82 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				26451AE724B09BD100EECA82 /* StateMachine.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		26451AE924B09C2000EECA82 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				26451AF124B0A02300EECA82 /* StateMachinable.swift */,
+				26EC701624C084EE009F8BF5 /* StateMachineManageable.swift */,
 				26451AEA24B09C5300EECA82 /* StateChangesApplyer.swift */,
 				26451AEC24B09E4A00EECA82 /* StateProvider.swift */,
 				26451AEE24B09F4400EECA82 /* StateControllersProvider.swift */,
@@ -165,21 +163,11 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		26451AF024B09FB900EECA82 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				26451AF124B0A02300EECA82 /* StateMachineViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		26451AF324B0A21000EECA82 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				26451ACF24B09B9100EECA82 /* StateDispatcher.h */,
-				26451AE624B09BBD00EECA82 /* Model */,
 				26451AE924B09C2000EECA82 /* Protocols */,
-				26451AF024B09FB900EECA82 /* ViewControllers */,
 				26451AF524B0A43200EECA82 /* Extensions */,
 			);
 			path = Sources;
@@ -241,6 +229,8 @@
 			children = (
 				26EC6FF724B60EA9009F8BF5 /* ContentStateMachineViewController.swift */,
 				26EC6FE724B5FF45009F8BF5 /* ContentStateControllersProvider.swift */,
+				26EC701124BF30CD009F8BF5 /* ContentStateProvider.swift */,
+				26EC701524C07C43009F8BF5 /* Model */,
 			);
 			path = ContentStateMachineViewController;
 			sourceTree = "<group>";
@@ -279,6 +269,14 @@
 				26EC700224B618E8009F8BF5 /* EmptyViewController.xib */,
 			);
 			path = EmptyViewController;
+			sourceTree = "<group>";
+		};
+		26EC701524C07C43009F8BF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26EC701324C06BCC009F8BF5 /* ContentSateMachine.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,9 +426,9 @@
 			files = (
 				26451AEF24B09F4400EECA82 /* StateControllersProvider.swift in Sources */,
 				26451AEB24B09C5300EECA82 /* StateChangesApplyer.swift in Sources */,
-				26451AE824B09BD100EECA82 /* StateMachine.swift in Sources */,
-				26451AF224B0A02300EECA82 /* StateMachineViewController.swift in Sources */,
+				26451AF224B0A02300EECA82 /* StateMachinable.swift in Sources */,
 				26451AED24B09E4A00EECA82 /* StateProvider.swift in Sources */,
+				26EC701724C084EE009F8BF5 /* StateMachineManageable.swift in Sources */,
 				26451AF724B0A45C00EECA82 /* UIViewController+child.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,17 +446,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				26EC700724B61A8A009F8BF5 /* ContentViewController.swift in Sources */,
-				26EC6FEA24B6005F009F8BF5 /* StateMachineViewController.swift in Sources */,
+				26EC701824C08585009F8BF5 /* StateMachineManageable.swift in Sources */,
+				26EC6FEA24B6005F009F8BF5 /* StateMachinable.swift in Sources */,
 				26EC6FEC24B6008F009F8BF5 /* StateProvider.swift in Sources */,
 				26451AFF24B1201A00EECA82 /* AppDelegate.swift in Sources */,
 				26EC6FF124B607B8009F8BF5 /* SettingsViewController.swift in Sources */,
 				26EC6FF824B60EA9009F8BF5 /* ContentStateMachineViewController.swift in Sources */,
-				26EC6FED24B60098009F8BF5 /* StateMachine.swift in Sources */,
 				26EC6FFF24B614BA009F8BF5 /* ErrorViewController.swift in Sources */,
 				26EC6FEB24B6008C009F8BF5 /* StateChangesApplyer.swift in Sources */,
+				26EC701424C06BCC009F8BF5 /* ContentSateMachine.swift in Sources */,
 				26EC6FE924B5FF4D009F8BF5 /* StateControllersProvider.swift in Sources */,
 				26EC6FE824B5FF45009F8BF5 /* ContentStateControllersProvider.swift in Sources */,
 				26EC6FF624B60D9C009F8BF5 /* Settings.swift in Sources */,
+				26EC701224BF30CD009F8BF5 /* ContentStateProvider.swift in Sources */,
 				26EC700324B618E8009F8BF5 /* EmptyViewController.swift in Sources */,
 				26EC6FFB24B613EB009F8BF5 /* LoadingViewController.swift in Sources */,
 				26EC6FEE24B600A3009F8BF5 /* UIViewController+child.swift in Sources */,
